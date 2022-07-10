@@ -10,6 +10,7 @@ namespace HolisticJam
     {
 
         [SerializeField] public event Action PerformInteraction;
+        [SerializeField] public event Action<string, bool> UpdateUI;
         private List<IInteractionRequester> requesterList;
 
 
@@ -34,6 +35,14 @@ namespace HolisticJam
         {
             Debug.Log($"Interaction was requested, event received in broker");
             PerformInteraction?.Invoke();
+        }
+
+        // if `showText` is false the UI is supposed to hide the element and will
+        // ignore the `stringValue`.
+        public void UISendUpdate(string stringValue, bool showText)
+        {
+            Debug.Log($"Broker.UISendUpdate for '{stringValue}' [{showText}]");
+            UpdateUI?.Invoke(stringValue, showText);
         }
 
     }
