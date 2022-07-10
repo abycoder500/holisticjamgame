@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using System;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 using StarterAssets;
@@ -10,7 +11,7 @@ namespace HolisticJam
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
     [RequireComponent(typeof(PlayerInput))]
 #endif
-    public class HolisticPlayerController : MonoBehaviour
+    public class HolisticPlayerController : MonoBehaviour, IInteractionRequester
     {
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
@@ -75,6 +76,10 @@ namespace HolisticJam
 
         private const float _threshold = 0.01f;
 
+        public event Action InteractionRequest;
+        [field: SerializeField] public InteractionBroker Broker { get; protected set; }
+
+
         private bool IsCurrentDeviceMouse
         {
             get
@@ -86,6 +91,7 @@ namespace HolisticJam
 #endif
             }
         }
+
 
         private void Awake()
         {
@@ -109,6 +115,13 @@ namespace HolisticJam
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            // Can't do this in Awake because broker's Awake needs to run first and initialize its list of requesters
+            if (Broker == null)
+            {
+                Broker = FindObjectOfType<InteractionBroker>();
+                Broker.ConnectInteractionRequester(this);
+            }
         }
 
         private void Update()
@@ -133,10 +146,11 @@ namespace HolisticJam
 
         private void CheckInteraction()
         {
-
             if (_input.interaction)
-                Debug.Log("**Interact**");
-				_input.interaction = false;
+            {
+                InteractionRequest?.Invoke();
+                _input.interaction = false;
+            }
         }
 
         private void CameraRotation()
