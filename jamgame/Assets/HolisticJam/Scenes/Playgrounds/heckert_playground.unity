@@ -1034,6 +1034,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8590694020862943266, guid: 1ed73b6b7da201011a4a01f1a94e22b0,
+        type: 3}
+      propertyPath: _triggerLeftString
+      value: Proximity to box left
+      objectReference: {fileID: 0}
+    - target: {fileID: 8590694020862943266, guid: 1ed73b6b7da201011a4a01f1a94e22b0,
+        type: 3}
+      propertyPath: _triggerEnteredString
+      value: Press 'r' to interact with box
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ed73b6b7da201011a4a01f1a94e22b0, type: 3}
 --- !u!1 &1764214107
