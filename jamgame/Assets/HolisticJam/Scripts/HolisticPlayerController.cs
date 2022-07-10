@@ -120,8 +120,8 @@ namespace HolisticJam
             if (Broker == null)
             {
                 Broker = FindObjectOfType<InteractionBroker>();
-                Broker.ConnectInteractionRequester(this);
             }
+            Broker.ConnectInteractionRequester(this);
         }
 
         private void Update()
