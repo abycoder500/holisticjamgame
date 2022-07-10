@@ -21,8 +21,8 @@ namespace HolisticJam
 
         void OnTriggerEnter(Collider other)
         {
-            Debug.Log($"{other.name} entered the trigger area");
-            if (other.CompareTag("Player"))
+            Debug.Log($"{other.name} entered the trigger area of {name}");
+            if(other.GetComponent<MonoBehaviour>() is IInteractionRequester)
             {
                 Debug.Log($"{name} in proximity to interactor");
                 Broker.PerformInteraction += OnPerformInteraction;
@@ -31,8 +31,8 @@ namespace HolisticJam
 
         void OnTriggerExit(Collider other)
         {
-            Debug.Log($"{other.name} left the trigger area");
-            if (other.CompareTag("Player"))
+            Debug.Log($"{other.name} left the trigger area of {name}");
+            if(other.GetComponent<MonoBehaviour>() is IInteractionRequester)
             {
                 Broker.PerformInteraction -= OnPerformInteraction;
             }
