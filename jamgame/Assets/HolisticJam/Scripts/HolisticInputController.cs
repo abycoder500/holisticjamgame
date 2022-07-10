@@ -20,6 +20,17 @@ namespace HolisticJam
         {
             InteractInput(value.isPressed);
         }
+
+        public void OnQuit(InputValue value)
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
+
+
 #endif
         public void InteractInput(bool newInteractionState)
         {
