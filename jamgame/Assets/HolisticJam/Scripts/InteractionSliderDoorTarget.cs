@@ -41,7 +41,6 @@ namespace HolisticJam
             while (lerpValue < 1f)
             {
                 lerpValue += Time.deltaTime * _moveSpeed;
-                Debug.Log($"Lerping({lerpValue})");
                 transform.position = Vector3.Lerp(_startingPosition, _targetPosition, lerpValue);
 
                 yield return waitFrame;
