@@ -10,6 +10,8 @@ namespace HolisticJam
         // needs "field:" to be actually accessible in inspector
         [field: SerializeField] public InteractionBroker Broker { get; protected set; }
 
+        [SerializeField] InteractionTarget _targetObject;
+
         [SerializeField] string _triggerEnteredString = "Proximity";
         [SerializeField] float _triggerEnteredDelay = 10f;
         [SerializeField] string _triggerLeftString = "";
@@ -70,6 +72,20 @@ namespace HolisticJam
         void OnPerformInteraction()
         {
             Debug.Log($"{name} performs interaction");
+
+            if (_targetObject == null)
+            {
+                PerformOnSelf();
+            }
+            else
+            {
+                _targetObject.ActivateTargetAction();
+            }
+
+        }
+
+        private void PerformOnSelf()
+        {
             Broker.UISendUpdate("Ooomph. You pushed the block upwards.", true);
             Invoke(nameof(DelayedUIUpdate), _triggerLeftDelay);
             // This is just some dummy action to give some feedback in the playground scene...
