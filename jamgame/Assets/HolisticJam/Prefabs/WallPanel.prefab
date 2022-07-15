@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7738939886235653326}
   - component: {fileID: 7673578616396952577}
-  - component: {fileID: 4036795593090919454}
+  - component: {fileID: 4441743512786025834}
   m_Layer: 0
   m_Name: Intercom
   m_TagString: Untagged
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _broker: {fileID: 0}
   _broadcastDelay: 0
---- !u!114 &4036795593090919454
+--- !u!114 &4441743512786025834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,12 +56,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3054908041932021697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 535b1962d4bc36760b2397ec72f3666d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f5e1edc7a1155419859688df7943240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _broker: {fileID: 0}
   narration: {fileID: 0}
-  isRepeatable: 1
+  isRepeatable: 0
 --- !u!1 &7979077552447228623
 GameObject:
   m_ObjectHideFlags: 0
