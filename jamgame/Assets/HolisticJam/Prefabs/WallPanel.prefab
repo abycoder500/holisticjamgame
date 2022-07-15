@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narration: {fileID: 0}
-  isRepeatable: 0
+  isRepeatable: 1
 --- !u!1 &7979077552447228623
 GameObject:
   m_ObjectHideFlags: 0
