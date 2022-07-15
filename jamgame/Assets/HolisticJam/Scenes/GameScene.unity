@@ -1800,6 +1800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _broker: {fileID: 0}
+  _broadcastDelay: 0
 --- !u!114 &1362066908
 MonoBehaviour:
   m_ObjectHideFlags: 0
