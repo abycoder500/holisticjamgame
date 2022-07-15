@@ -595,7 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 443581160}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Levelmap Loop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,7 +881,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _targetObject
       value: 
-      objectReference: {fileID: 1362066905}
+      objectReference: {fileID: 1362066907}
     - target: {fileID: 8590694020862943266, guid: 1ed73b6b7da201011a4a01f1a94e22b0,
         type: 3}
       propertyPath: _triggerLeftDelay
@@ -1684,7 +1684,8 @@ GameObject:
   - component: {fileID: 1362066904}
   - component: {fileID: 1362066903}
   - component: {fileID: 1362066902}
-  - component: {fileID: 1362066905}
+  - component: {fileID: 1362066907}
+  - component: {fileID: 1362066906}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -1770,7 +1771,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362066900}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1362066905
+--- !u!114 &1362066906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1779,13 +1780,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362066900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6593fafdd897867bea37da645f31afeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d1a187ac55d13349ac2000a9425cc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _broker: {fileID: 0}
   _moveAxisVector: {x: 0, y: -1, z: 0}
   _moveDistance: 5
   _moveSpeed: 10
+--- !u!114 &1362066907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362066900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde2bd910c5a7edb5af968d758b876c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _broker: {fileID: 0}
 --- !u!1 &1406553551 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8275807991154644824, guid: 01f9e35a403e9d326b9e846e5a99a4db,
