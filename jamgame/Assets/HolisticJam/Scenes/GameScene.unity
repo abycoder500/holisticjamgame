@@ -141,7 +141,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9c191901448cc9812a305f4fcc5a7eef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c191901448cc9812a305f4fcc5a7eef,
         type: 3}
@@ -188,10 +188,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1644580970151730890, guid: 9c191901448cc9812a305f4fcc5a7eef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9c191901448cc9812a305f4fcc5a7eef,
         type: 3}
       propertyPath: m_Name
       value: Layout 1 loop
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477517207412424744, guid: 9c191901448cc9812a305f4fcc5a7eef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2477517207412424744, guid: 9c191901448cc9812a305f4fcc5a7eef,
+        type: 3}
+      propertyPath: m_TagString
+      value: PassableWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133548391528676871, guid: 9c191901448cc9812a305f4fcc5a7eef,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c191901448cc9812a305f4fcc5a7eef, type: 3}
